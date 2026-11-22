@@ -7,6 +7,7 @@ import { EducationPage } from './pages/EducationPage';
 import { ExperiencePage } from './pages/ExperiencePage';
 import { HomePage } from './pages/HomePage';
 import { ProjectsPage } from './pages/ProjectsPage';
+import { SkillsPage } from './pages/SkillsPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -47,6 +48,7 @@ export function App() {
             >
               <Routes location={location}>
                 <Route path="/" element={<HomePage />} />
+                <Route path="/skills" element={<SkillsPage />} />
                 <Route path="/projects" element={<ProjectsPage />} />
                 <Route path="/experience" element={<ExperiencePage />} />
                 <Route path="/education" element={<EducationPage />} />

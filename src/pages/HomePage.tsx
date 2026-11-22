@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { ArrowUpRight, Briefcase, Download, FolderGit2, Github, GraduationCap, Linkedin, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { fadeUpVariants, staggerContainer } from '../components/MotionPrimitives';
+import { SkillsSection } from '../components/SkillsSection';
 import { PROFILE } from '../data/portfolio';
 
 const QUICK_CARDS = [
@@ -146,6 +147,8 @@ export function HomePage() {
           </motion.div>
         </div>
       </section>
+
+      <SkillsSection />
     </>
   );
 }
