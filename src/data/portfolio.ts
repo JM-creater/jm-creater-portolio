@@ -53,7 +53,7 @@ export const PROFILE = {
   linkedinDisplay: 'linkedin.com/in/joseph-martin-garado-19b5a6202',
   github: 'https://github.com/JM-creater',
   githubDisplay: 'github.com/JM-creater',
-  resumePath: '/Joseph-Martin-Garado-Resume.pdf',
+  resumePath: '/Joseph Martin T. Garado - Resume.pdf',
   avatarPath: '/profile_img.jpg',
   summary:
     'Full-Stack Software Developer with 2+ years of experience designing and implementing features across web, desktop, and mobile applications using Java, Spring Boot, React.js, Electron.js, React Native, TypeScript, and MySQL. Experienced in RESTful API architecture, relational database optimization, automated testing, and cross-functional Agile delivery.',
@@ -148,7 +148,7 @@ export const EXPERIENCE: ExperienceItem[] = [
         current: true,
         highlights: [
           {
-            text: 'Promoted to Associate Technical Specialist I for consistent full-stack feature delivery and module ownership.',
+            text: 'Promoted from Technical Specialist I to Technical Specialist II and then to Associate Technical Specialist I for consistent full-stack feature delivery and module ownership.',
           },
           {
             text: 'Engineered new Point of Sale (POS) features, including a mobile POS application across platforms using React Native, Electron.js, React.js, TypeScript, Java, and Spring Boot.',
