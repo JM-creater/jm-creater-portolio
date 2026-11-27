@@ -6,6 +6,7 @@ import { PROFILE } from '../data/portfolio';
 
 const NAV_ITEMS = [
   { label: 'Summary', to: '/', end: true },
+  { label: 'Skills', to: '/skills' },
   { label: 'Projects', to: '/projects' },
   { label: 'Experience', to: '/experience' },
   { label: 'Education', to: '/education' },

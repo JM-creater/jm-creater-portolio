@@ -1,5 +1,11 @@
+import { motion } from 'framer-motion';
 import { MapPin } from 'lucide-react';
-import { Reveal, SectionHeading } from '../components/MotionPrimitives';
+import {
+  Reveal,
+  SectionHeading,
+  fadeUpVariants,
+  staggerContainer,
+} from '../components/MotionPrimitives';
 import { EXPERIENCE } from '../data/portfolio';
 
 export function ExperiencePage() {
@@ -25,13 +31,36 @@ export function ExperiencePage() {
                 </span>
               </div>
 
-              <div className="roles-list">
+              <motion.div
+                className="roles-timeline"
+                variants={staggerContainer}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+              >
                 {exp.roles.map((role) => (
-                  <div key={role.title} className="role-block">
+                  <motion.div
+                    key={`${role.title}-${role.period}`}
+                    variants={fadeUpVariants}
+                    className="role-block"
+                  >
+                    <span
+                      className={`role-dot${role.current ? ' role-dot-current' : ''}`}
+                      aria-hidden="true"
+                    />
                     <div className="role-row">
-                      <span className="role-title">{role.title}</span>
+                      <div className="role-title-wrap">
+                        <span className="role-title">{role.title}</span>
+                        {role.current ? (
+                          <span className="live-badge">
+                            <span className="live-dot" aria-hidden="true" />
+                            Current
+                          </span>
+                        ) : null}
+                      </div>
                       <span className="role-period">{role.period}</span>
                     </div>
+
                     {role.highlights && role.highlights.length > 0 ? (
                       <ul className="highlights-list">
                         {role.highlights.map((item, idx) => (
@@ -42,9 +71,9 @@ export function ExperiencePage() {
                         ))}
                       </ul>
                     ) : null}
-                  </div>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
             </Reveal>
           ))}
         </div>

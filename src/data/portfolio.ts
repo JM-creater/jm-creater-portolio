@@ -9,16 +9,29 @@ export interface Project {
   category: string;
 }
 
+export interface ExperienceHighlight {
+  label?: string;
+  text: string;
+}
+
 export interface ExperienceRole {
   title: string;
   period: string;
-  highlights?: { label?: string; text: string }[];
+  current?: boolean;
+  highlights?: ExperienceHighlight[];
 }
 
 export interface ExperienceItem {
   company: string;
   location: string;
   roles: ExperienceRole[];
+}
+
+export interface SkillCategory {
+  id: string;
+  title: string;
+  subtitle: string;
+  skills: string[];
 }
 
 export const PROFILE = {
@@ -82,6 +95,7 @@ export const EXPERIENCE: ExperienceItem[] = [
       {
         title: 'Software Developer – Associate Technical Specialist I',
         period: 'February 2026 – Present',
+        current: true,
         highlights: [
           {
             text: 'Promoted to Associate Technical Specialist I for consistent full-stack feature delivery and module ownership.',
@@ -126,6 +140,45 @@ export const EXPERIENCE: ExperienceItem[] = [
         ],
       },
     ],
+  },
+];
+
+export const SKILL_CATEGORIES: SkillCategory[] = [
+  {
+    id: 'languages',
+    title: 'Languages',
+    subtitle: 'Strongly-typed application logic and relational querying',
+    skills: ['Java', 'TypeScript', 'JavaScript', 'SQL'],
+  },
+  {
+    id: 'frontend',
+    title: 'Frontend & Cross-Platform',
+    subtitle: 'Web, mobile, and desktop interfaces',
+    skills: ['React.js', 'React Native', 'Electron.js'],
+  },
+  {
+    id: 'backend',
+    title: 'Backend & Databases',
+    subtitle: 'API architecture, security, and query optimization',
+    skills: [
+      'Spring Boot',
+      'Spring Data JPA / Hibernate',
+      'Spring Security',
+      'RESTful APIs',
+      'MySQL',
+    ],
+  },
+  {
+    id: 'devops',
+    title: 'DevOps, Testing & Tooling',
+    subtitle: 'Containerization, automated pipelines, and quality assurance',
+    skills: ['Docker', 'CI/CD', 'Git', 'Software Testing'],
+  },
+  {
+    id: 'ai',
+    title: 'AI & Agentic Engineering',
+    subtitle: 'Modern AI-assisted development workflows',
+    skills: ['Agentic Workflows', 'GitHub Copilot', 'Gemini Skills'],
   },
 ];
 
