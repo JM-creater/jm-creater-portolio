@@ -65,7 +65,7 @@ export function Navbar() {
         <div className="nav-actions">
           <a
             href={PROFILE.resumePath}
-            download="Joseph Martin Garado - Resume.pdf"
+            download="Joseph Martin T. Garado - Resume.pdf"
             className="btn btn-secondary btn-sm"
           >
             <Download size={15} />
