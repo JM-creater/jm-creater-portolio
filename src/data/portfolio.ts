@@ -1,12 +1,20 @@
+export interface ProjectRepoLink {
+  label: string;
+  url: string;
+}
+
 export interface Project {
   id: string;
   title: string;
   role: string;
   description: string;
   tech: string[];
-  liveUrl: string;
-  githubUrl: string;
+  liveUrl?: string;
+  githubUrl?: string;
+  githubLinks?: ProjectRepoLink[];
   category: string;
+  badge?: string;
+  year?: string;
 }
 
 export interface ExperienceHighlight {
@@ -57,6 +65,7 @@ export const PROJECTS: Project[] = [
     title: 'Barangay Cansojong e-Services Platform',
     role: 'Full-Stack Developer',
     category: 'Civic Tech · Full-Stack',
+    year: '2026',
     description:
       'Engineered a digital public-service portal using Spring Boot, React.js, TypeScript, and MySQL to automate citizen document requests (clearances, certificates of indigency, cedulas) and appointment scheduling.',
     tech: ['Spring Boot', 'React.js', 'TypeScript', 'MySQL'],
@@ -68,6 +77,7 @@ export const PROJECTS: Project[] = [
     title: 'Tabunok DRRM System Core',
     role: 'Full-Stack Developer',
     category: 'Public Safety · Full-Stack',
+    year: '2026',
     description:
       'Built a disaster risk reduction and management (DRRM) backend and web platform using Java, Spring Boot, Spring Security (JWT), and MySQL for incident reporting, hazard safety tracking, and early warning alerts.',
     tech: ['Java', 'Spring Boot', 'Spring Security (JWT)', 'MySQL'],
@@ -79,11 +89,51 @@ export const PROJECTS: Project[] = [
     title: 'AMor Fuzzia – Custom Bouquet Ordering Platform',
     role: 'Full-Stack Developer',
     category: 'E-Commerce · Web App',
+    year: '2026',
     description:
       'Built a custom e-commerce ordering web application using React.js, TypeScript, and Firebase Hosting with automated GitHub Actions CI/CD deployment for made-to-order handcrafted fuzzy-wire bouquets.',
     tech: ['React.js', 'TypeScript', 'Firebase Hosting', 'GitHub Actions'],
     liveUrl: 'https://amor-fuzzia-011.web.app/',
     githubUrl: 'https://github.com/JM-creater/amor-fuzzia',
+  },
+];
+
+export const COLLEGE_PROJECTS: Project[] = [
+  {
+    id: 'knowledge-site-app',
+    title: 'LearNest – Knowledge Site App',
+    role: 'Full-Stack Developer',
+    category: 'EdTech · Full-Stack',
+    badge: 'Alliance Jumpstart',
+    description:
+      'Developed during the Alliance Jumpstart Program with Alliance Software Inc. A digital learning and knowledge-sharing platform designed to provide users with structured access to educational resources, study materials, and collaborative content.',
+    tech: ['TypeScript', 'React.js', 'C#', 'ASP.NET Core'],
+    githubUrl: 'https://github.com/JM-creater/Knowledge-Site-App',
+  },
+  {
+    id: 'evotery',
+    title: 'eVotery – Online Voting System',
+    role: 'Full-Stack Developer',
+    category: 'Civic Tech · Academic',
+    badge: 'College Project',
+    description:
+      'Built a secure digital voting web application with an ASP.NET Core Web API backend and TypeScript frontend, featuring dedicated voter and administrator portals, candidate and election period management, authentication workflows, and automated vote tallying.',
+    tech: ['ASP.NET Core Web API', 'C#', 'TypeScript', 'React.js'],
+    githubUrl: 'https://github.com/JM-creater/eVotery',
+  },
+  {
+    id: 'unitee',
+    title: 'UniTee – School Uniform & Merchandise Platform',
+    role: 'Full-Stack Developer',
+    category: 'E-Commerce · Capstone',
+    badge: 'Capstone Project',
+    description:
+      'Engineered a full-stack university uniform and merchandise e-commerce storefront for the BSIT Capstone Project at University of Cebu, built with a TypeScript frontend and a C# / .NET backend across dedicated repositories.',
+    tech: ['TypeScript', 'React.js', 'C#', '.NET Web API'],
+    githubLinks: [
+      { label: 'Frontend Repo', url: 'https://github.com/JM-creater/unitee' },
+      { label: 'Backend Repo', url: 'https://github.com/JM-creater/UNITEE_BACKEND' },
+    ],
   },
 ];
 

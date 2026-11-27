@@ -10,8 +10,8 @@ const QUICK_CARDS = [
     to: '/projects',
     icon: FolderGit2,
     title: 'Projects',
-    meta: '3 live full-stack platforms',
-    desc: 'Barangay e-Services, Tabunok DRRM System Core, and AMor Fuzzia.',
+    meta: '3 live 2026 platforms · 3 college projects',
+    desc: '2026 deployed platforms (Barangay e-Services, Tabunok DRRM, AMor Fuzzia) and college projects.',
   },
   {
     to: '/experience',
