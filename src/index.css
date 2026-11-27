@@ -620,15 +620,6 @@ button {
   color: var(--text-muted);
 }
 
-.roles-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.55rem;
-  margin-block-end: 1.25rem;
-  padding-inline-start: 0.95rem;
-  border-inline-start: 2px solid var(--border-strong);
-}
-
 .roles-timeline {
   display: flex;
   flex-direction: column;

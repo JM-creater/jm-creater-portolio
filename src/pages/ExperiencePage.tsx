@@ -61,14 +61,16 @@ export function ExperiencePage() {
                       <span className="role-period">{role.period}</span>
                     </div>
 
-                    <ul className="highlights-list">
-                      {role.highlights.map((item, idx) => (
-                        <li key={idx}>
-                          {item.label ? <strong>{item.label}: </strong> : null}
-                          {item.text}
-                        </li>
-                      ))}
-                    </ul>
+                    {role.highlights && role.highlights.length > 0 ? (
+                      <ul className="highlights-list">
+                        {role.highlights.map((item, idx) => (
+                          <li key={idx}>
+                            {item.label ? <strong>{item.label}: </strong> : null}
+                            {item.text}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
                   </motion.div>
                 ))}
               </motion.div>

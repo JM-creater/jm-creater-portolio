@@ -18,7 +18,7 @@ export interface ExperienceRole {
   title: string;
   period: string;
   current?: boolean;
-  highlights: ExperienceHighlight[];
+  highlights?: ExperienceHighlight[];
 }
 
 export interface ExperienceItem {
@@ -118,6 +118,10 @@ export const EXPERIENCE: ExperienceItem[] = [
         ],
       },
       {
+        title: 'Software Developer – Technical Specialist II',
+        period: 'February 2026',
+      },
+      {
         title: 'Software Developer – Technical Specialist I',
         period: 'July 2024 – February 2026',
         highlights: [
@@ -131,7 +135,7 @@ export const EXPERIENCE: ExperienceItem[] = [
             text: 'Executed software testing, contributing to a reduced bug rate in production by approximately 25%.',
           },
           {
-            text: 'Engaged in code reviews to uphold standards and refine UI/UX using Agile methodologies, improving team productivity.',
+            text: 'Engaged in code reviews to uphold standards using Agile methodologies, improving team productivity.',
           },
         ],
       },
