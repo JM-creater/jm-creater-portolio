@@ -623,10 +623,20 @@ button {
 .roles-list {
   display: flex;
   flex-direction: column;
-  gap: 0.55rem;
-  margin-block-end: 1.25rem;
+  gap: 1.35rem;
   padding-inline-start: 0.95rem;
   border-inline-start: 2px solid var(--border-strong);
+}
+
+.role-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.role-block + .role-block {
+  padding-block-start: 1.1rem;
+  border-block-start: 1px solid var(--border);
 }
 
 .role-row {

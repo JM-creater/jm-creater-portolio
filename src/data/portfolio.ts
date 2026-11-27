@@ -9,11 +9,16 @@ export interface Project {
   category: string;
 }
 
+export interface ExperienceRole {
+  title: string;
+  period: string;
+  highlights?: { label?: string; text: string }[];
+}
+
 export interface ExperienceItem {
   company: string;
   location: string;
-  roles: { title: string; period: string }[];
-  highlights: { label?: string; text: string }[];
+  roles: ExperienceRole[];
 }
 
 export const PROFILE = {
@@ -77,29 +82,48 @@ export const EXPERIENCE: ExperienceItem[] = [
       {
         title: 'Software Developer – Associate Technical Specialist I',
         period: 'February 2026 – Present',
+        highlights: [
+          {
+            text: 'Promoted to Associate Technical Specialist I for consistent full-stack feature delivery and module ownership.',
+          },
+          {
+            text: 'Engineered new Point of Sale (POS) features, including a mobile POS application across platforms using React Native, Electron.js, React.js, TypeScript, Java, and Spring Boot.',
+          },
+          {
+            text: 'Developed and optimized full-stack ERP features and RESTful APIs with a focus on efficient SQL and MySQL query execution for enhanced reporting performance.',
+          },
+          {
+            text: 'Identified and resolved software bugs and production issues, leading to improved application stability and operational workflows.',
+          },
+          {
+            text: 'Facilitated peer code reviews and implemented software testing, managing code releases within Agile/Scrum environments.',
+          },
+          {
+            text: 'Leveraged agentic workflows to accelerate development tasks and improve delivery speed.',
+          },
+        ],
+      },
+      {
+        title: 'Software Developer – Technical Specialist II',
+        period: 'February 2026',
       },
       {
         title: 'Software Developer – Technical Specialist I',
         period: 'July 2024 – February 2026',
-      },
-    ],
-    highlights: [
-      {
-        text: 'Promoted from Technical Specialist I through Technical Specialist II to Associate Technical Specialist I in February 2026 for consistent full-stack feature delivery and module ownership.',
-      },
-      {
-        label: 'Point of Sale (POS) System',
-        text: 'Developed new POS features including a mobile POS application across mobile, desktop, and web platforms using React Native, Electron.js, React.js, TypeScript, Java, and Spring Boot.',
-      },
-      {
-        label: 'Enterprise Resource Planning (ERP) System',
-        text: 'Built full-stack ERP features and RESTful APIs using Java, Spring Boot, React.js, TypeScript, and Ant Design, and optimized complex SQL and MySQL queries for faster reporting and transactions.',
-      },
-      {
-        text: 'Investigated and resolved software bugs and production issues across both POS and ERP systems, improving application stability and daily operational workflows.',
-      },
-      {
-        text: 'Conducted peer code reviews, implemented unit and integration tests, and managed code releases across environments within Agile/Scrum sprints.',
+        highlights: [
+          {
+            text: 'Collaborated on cross-functional teams to enhance application features and ensured high-quality deliverables.',
+          },
+          {
+            text: 'Designed and maintained RESTful APIs, integrating them with MySQL databases to streamline data access and retrieval.',
+          },
+          {
+            text: 'Executed software testing, contributing to a reduced bug rate in production by approximately 25%.',
+          },
+          {
+            text: 'Engaged in code reviews to uphold standards using Agile methodologies, improving team productivity.',
+          },
+        ],
       },
     ],
   },

@@ -27,21 +27,24 @@ export function ExperiencePage() {
 
               <div className="roles-list">
                 {exp.roles.map((role) => (
-                  <div key={role.title} className="role-row">
-                    <span className="role-title">{role.title}</span>
-                    <span className="role-period">{role.period}</span>
+                  <div key={role.title} className="role-block">
+                    <div className="role-row">
+                      <span className="role-title">{role.title}</span>
+                      <span className="role-period">{role.period}</span>
+                    </div>
+                    {role.highlights && role.highlights.length > 0 ? (
+                      <ul className="highlights-list">
+                        {role.highlights.map((item, idx) => (
+                          <li key={idx}>
+                            {item.label ? <strong>{item.label}: </strong> : null}
+                            {item.text}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
                   </div>
                 ))}
               </div>
-
-              <ul className="highlights-list">
-                {exp.highlights.map((item, idx) => (
-                  <li key={idx}>
-                    {item.label ? <strong>{item.label}: </strong> : null}
-                    {item.text}
-                  </li>
-                ))}
-              </ul>
             </Reveal>
           ))}
         </div>
