@@ -6,6 +6,9 @@ import { SectionHeading } from './MotionPrimitives';
 
 const CATEGORY_ICONS: Record<string, typeof Code2> = {
   languages: Code2,
+  frameworks: Layers,
+  'databases-devops': Database,
+  'tools-practices': Wrench,
   frontend: Layers,
   backend: Database,
   devops: Wrench,

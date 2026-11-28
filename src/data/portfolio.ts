@@ -26,6 +26,7 @@ export interface ExperienceRole {
   title: string;
   period: string;
   current?: boolean;
+  summary?: string;
   highlights?: ExperienceHighlight[];
 }
 
@@ -42,12 +43,18 @@ export interface SkillCategory {
   skills: string[];
 }
 
+export interface CredentialItem {
+  title: string;
+  issuer: string;
+  date: string;
+}
+
 export const PROFILE = {
   name: 'Joseph Martin T. Garado',
   shortName: 'JM Garado',
   role: 'Full-Stack Software Developer',
   location: 'Cebu City, Philippines',
-  phone: '09569911935',
+  phone: '+63 956 991 1935',
   email: 'garadojosephmartin98@gmail.com',
   linkedin: 'https://www.linkedin.com/in/joseph-martin-garado-19b5a6202',
   linkedinDisplay: 'linkedin.com/in/joseph-martin-garado-19b5a6202',
@@ -56,22 +63,10 @@ export const PROFILE = {
   resumePath: '/Joseph Martin T. Garado - Resume.pdf',
   avatarPath: '/profile_img.jpg',
   summary:
-    'Full-Stack Software Developer with 2+ years of experience designing and implementing features across web, desktop, and mobile applications using Java, Spring Boot, React.js, Electron.js, React Native, TypeScript, and MySQL. Experienced in RESTful API architecture, relational database optimization, automated testing, and cross-functional Agile delivery.',
+    'Full-Stack Software Developer with over 2 years of experience in designing and implementing web, desktop, and mobile applications using Java, Spring Boot, and React.js. Skilled in RESTful API architecture, MySQL optimization, and Agile delivery methodologies.',
 };
 
 export const PROJECTS: Project[] = [
-  {
-    id: 'barangay-eservices',
-    title: 'Barangay Cansojong e-Services Platform',
-    role: 'Full-Stack Developer',
-    category: 'Civic Tech · Full-Stack',
-    year: '2026',
-    description:
-      'Engineered a digital public-service portal using Spring Boot, React.js, TypeScript, and MySQL to automate citizen document requests (clearances, certificates of indigency, cedulas) and appointment scheduling.',
-    tech: ['Spring Boot', 'React.js', 'TypeScript', 'MySQL'],
-    liveUrl: 'https://barangay-eservices.pages.dev/',
-    githubUrl: 'https://github.com/JM-creater/Barangay-eServices',
-  },
   {
     id: 'tabunok-drrm',
     title: 'Tabunok DRRM System Core',
@@ -79,20 +74,32 @@ export const PROJECTS: Project[] = [
     category: 'Public Safety · Full-Stack',
     year: '2026',
     description:
-      'Built a disaster risk reduction and management (DRRM) backend and web platform using Java, Spring Boot, Spring Security (JWT), and MySQL for incident reporting, hazard safety tracking, and early warning alerts.',
-    tech: ['Java', 'Spring Boot', 'Spring Security (JWT)', 'MySQL'],
+      'Developed a robust backend using Java and Spring Boot for a disaster risk reduction and management platform, enhancing incident reporting capabilities. Secured REST APIs with JWT authentication and optimized deployment using Docker, facilitating real-time incident management.',
+    tech: ['Java', 'Spring Boot', 'JWT', 'Docker', 'MySQL'],
     liveUrl: 'https://disaster-information.shop/login',
     githubUrl: 'https://github.com/JM-creater/ddrm-system-core',
   },
   {
+    id: 'barangay-eservices',
+    title: 'Barangay Cansojong e-Services Platform',
+    role: 'Full-Stack Developer',
+    category: 'Civic Tech · Full-Stack',
+    year: '2026',
+    description:
+      'Created a digital public-service portal that automated citizen document requests and appointment scheduling. Ensured seamless integration of the React frontend with Spring Boot REST APIs, improving user interaction and service efficiency.',
+    tech: ['Spring Boot', 'React.js', 'TypeScript', 'RESTful APIs', 'MySQL'],
+    liveUrl: 'https://barangay-eservices.pages.dev/',
+    githubUrl: 'https://github.com/JM-creater/Barangay-eServices',
+  },
+  {
     id: 'amor-fuzzia',
-    title: 'AMor Fuzzia – Custom Bouquet Ordering Platform',
+    title: 'Amor Fuzzia – Custom Bouquet Ordering Platform',
     role: 'Full-Stack Developer',
     category: 'E-Commerce · Web App',
     year: '2026',
     description:
-      'Built a custom e-commerce ordering web application using React.js, TypeScript, and Firebase Hosting with automated GitHub Actions CI/CD deployment for made-to-order handcrafted fuzzy-wire bouquets.',
-    tech: ['React.js', 'TypeScript', 'Firebase Hosting', 'GitHub Actions'],
+      'Implemented a custom e-commerce platform using React.js and TypeScript, facilitating handcrafted bouquet orders. Configured CI/CD pipelines with GitHub Actions for continuous integration and deployment, accelerating the development cycle.',
+    tech: ['React.js', 'TypeScript', 'GitHub Actions', 'CI/CD', 'Firebase Hosting'],
     liveUrl: 'https://amor-fuzzia-011.web.app/',
     githubUrl: 'https://github.com/JM-creater/amor-fuzzia',
   },
@@ -146,21 +153,26 @@ export const EXPERIENCE: ExperienceItem[] = [
         title: 'Software Developer – Associate Technical Specialist I',
         period: 'February 2026 – Present',
         current: true,
+        summary:
+          'Promoted from Technical Specialist I to Technical Specialist II and then to Associate Technical Specialist I for coordinated team execution, consistent full-stack feature delivery, and module ownership.',
         highlights: [
           {
-            text: 'Promoted from Technical Specialist I to Technical Specialist II and then to Associate Technical Specialist I for consistent full-stack feature delivery and module ownership.',
-          },
-          {
-            text: 'Engineered new Point of Sale (POS) features, including a mobile POS application across platforms using React Native, Electron.js, React.js, TypeScript, Java, and Spring Boot.',
-          },
-          {
             text: 'Developed and optimized full-stack ERP features and RESTful APIs with a focus on efficient SQL and MySQL query execution for enhanced reporting performance.',
+          },
+          {
+            text: 'Implemented Request for Comments (RFCs) and aligned technical specifications with the development team.',
           },
           {
             text: 'Identified and resolved software bugs and production issues, leading to improved application stability and operational workflows.',
           },
           {
-            text: 'Facilitated peer code reviews and implemented software testing, managing code releases within Agile/Scrum environments.',
+            text: 'Communicated directly with clients alongside cross-functional team members to investigate and resolve urgent production issues.',
+          },
+          {
+            text: 'Coordinated closely with team members and the Project Manager to align feature deliverables, timelines, and project requirements.',
+          },
+          {
+            text: 'Facilitated peer code reviews, conducted quality assurance (QA) and testing using JUnit, Jest, and AI-assisted automation testing, and managed code releases within Agile/Scrum environments.',
           },
           {
             text: 'Leveraged agentic workflows to accelerate development tasks and improve delivery speed.',
@@ -168,21 +180,22 @@ export const EXPERIENCE: ExperienceItem[] = [
         ],
       },
       {
-        title: 'Software Developer – Technical Specialist II',
-        period: 'February 2026',
-      },
-      {
         title: 'Software Developer – Technical Specialist I',
         period: 'July 2024 – February 2026',
+        summary:
+          'Partnered with cross-functional teams to enhance application features and ensure high-quality deliverables.',
         highlights: [
           {
-            text: 'Collaborated on cross-functional teams to enhance application features and ensured high-quality deliverables.',
+            text: 'Built and maintained Point of Sale (POS) features across desktop and web platforms using Electron.js, React.js, Ant Design, TypeScript, Java, and Spring Boot.',
+          },
+          {
+            text: 'Engineered a cross-platform mobile POS application alongside the development team using React Native.',
           },
           {
             text: 'Designed and maintained RESTful APIs, integrating them with MySQL databases to streamline data access and retrieval.',
           },
           {
-            text: 'Executed software testing, contributing to a reduced bug rate in production by approximately 25%.',
+            text: 'Executed manual testing and quality assurance (QA) alongside the QA team, contributing to a reduced bug rate in production.',
           },
           {
             text: 'Engaged in code reviews to uphold standards using Agile methodologies, improving team productivity.',
@@ -201,34 +214,41 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     skills: ['Java', 'TypeScript', 'JavaScript', 'SQL'],
   },
   {
-    id: 'frontend',
-    title: 'Frontend & Cross-Platform',
-    subtitle: 'Web, mobile, and desktop interfaces',
-    skills: ['React.js', 'React Native', 'Electron.js'],
-  },
-  {
-    id: 'backend',
-    title: 'Backend & Databases',
-    subtitle: 'API architecture, security, and query optimization',
+    id: 'frameworks',
+    title: 'Frameworks & Libraries',
+    subtitle: 'Backend architecture, security, and cross-platform UI',
     skills: [
       'Spring Boot',
       'Spring Data JPA / Hibernate',
       'Spring Security',
-      'RESTful APIs',
-      'MySQL',
+      'JWT',
+      'React.js',
+      'Ant Design',
+      'React Native',
+      'Electron.js',
     ],
   },
   {
-    id: 'devops',
-    title: 'DevOps, Testing & Tooling',
-    subtitle: 'Containerization, automated pipelines, and quality assurance',
-    skills: ['Docker', 'CI/CD', 'Git', 'Software Testing'],
+    id: 'databases-devops',
+    title: 'Databases & DevOps',
+    subtitle: 'Relational databases, containerization, CI/CD pipelines, and APIs',
+    skills: ['MySQL', 'Docker', 'CI/CD', 'GitHub Actions', 'Git', 'RESTful APIs'],
   },
   {
-    id: 'ai',
-    title: 'AI & Agentic Engineering',
-    subtitle: 'Modern AI-assisted development workflows',
-    skills: ['Agentic Workflows', 'GitHub Copilot', 'Gemini Skills'],
+    id: 'tools-practices',
+    title: 'Tools & Practices',
+    subtitle: 'Agile delivery, agentic AI workflows, and quality assurance',
+    skills: [
+      'Agile / Scrum',
+      'Agentic Workflows',
+      'AI-Assisted Development',
+      'GitHub Copilot',
+      'Gemini Skills',
+      'JUnit',
+      'Jest',
+      'AI Automation Testing',
+      'Manual Testing',
+    ],
   },
 ];
 
@@ -245,3 +265,49 @@ export const EDUCATION = {
     { label: 'Backend Repo', url: 'https://github.com/JM-creater/UNITEE_BACKEND' },
   ],
 };
+
+export const CERTIFICATIONS: CredentialItem[] = [
+  {
+    title: 'JavaScript Essentials 2',
+    issuer: 'Cisco',
+    date: 'June 2024',
+  },
+  {
+    title: 'Accenture Technology Academy',
+    issuer: 'Accenture in the Philippines',
+    date: 'May 2024',
+  },
+  {
+    title: 'JavaScript Essentials 1',
+    issuer: 'Cisco',
+    date: 'May 2024',
+  },
+  {
+    title: 'Hackathon Competition',
+    issuer: 'University of Cebu',
+    date: 'April 2024',
+  },
+  {
+    title: 'Frontend Fundamentals Bootcamp',
+    issuer: 'OneCodeCamp',
+    date: 'April 2024',
+  },
+  {
+    title: 'Alliance Jumpstart Program',
+    issuer: 'Alliance Software Inc.',
+    date: 'December 2023',
+  },
+];
+
+export const AWARDS: CredentialItem[] = [
+  {
+    title: "Dean's Lister",
+    issuer: 'University of Cebu',
+    date: '2021 – 2023',
+  },
+  {
+    title: 'Service Award – Public Information Officer (PIO)',
+    issuer: 'Philippine Society of Information Technology Students (PSITS)',
+    date: '2021 – 2023',
+  },
+];

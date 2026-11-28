@@ -11,21 +11,21 @@ const QUICK_CARDS = [
     icon: FolderGit2,
     title: 'Projects',
     meta: '3 live 2026 platforms · 3 college projects',
-    desc: '2026 deployed platforms (Barangay e-Services, Tabunok DRRM, AMor Fuzzia) and college projects.',
+    desc: '2026 deployed platforms (Tabunok DRRM, Barangay e-Services, Amor Fuzzia) and college projects.',
   },
   {
     to: '/experience',
     icon: Briefcase,
     title: 'Work Experience',
     meta: 'Alliance Software Inc.',
-    desc: 'Associate Technical Specialist I building POS and ERP systems.',
+    desc: 'Associate Technical Specialist I building ERP and POS systems.',
   },
   {
     to: '/education',
     icon: GraduationCap,
     title: 'Education',
     meta: 'University of Cebu · BSIT',
-    desc: 'Bachelor of Science in Information Technology and UniTee Capstone.',
+    desc: 'Bachelor of Science in Information Technology, certifications, and academic awards.',
   },
 ];
 
