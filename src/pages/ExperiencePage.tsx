@@ -61,6 +61,8 @@ export function ExperiencePage() {
                       <span className="role-period">{role.period}</span>
                     </div>
 
+                    {role.summary ? <p className="role-summary">{role.summary}</p> : null}
+
                     {role.highlights && role.highlights.length > 0 ? (
                       <ul className="highlights-list">
                         {role.highlights.map((item, idx) => (

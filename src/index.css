@@ -753,6 +753,13 @@ button {
   color: var(--accent);
 }
 
+.role-summary {
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
 .highlights-list {
   margin: 0;
   padding-inline-start: 1.15rem;
